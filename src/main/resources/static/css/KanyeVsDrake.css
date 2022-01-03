@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'YeFont';
+    src: url('JakesHandwriting.ttf') format('truetype')
+}
+
+#goat {
+    font-family: YeFont;
+    font-size: 200px;
+    color:#40b16d;
+}
+
+#tableContainer {
+    font-size: 23px;
+}
