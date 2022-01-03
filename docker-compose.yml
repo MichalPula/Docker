@@ -1,0 +1,25 @@
+version: '3.1'
+services:
+  API:
+    container_name: 'KanyeAPI'
+    image: 'kanye-rest-api-image'
+    ports:
+      - '8081:8080'
+    depends_on:
+     - PostgreSQL
+    environment:
+      - SPRING_DATASOURCE_URL=
+      - SPRING_DATASOURCE_USERNAME=
+      - SPRING_DATASOURCE_PASSWORD=
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=create-drop
+
+
+  PostgreSQL:
+    container_name: 'KanyeAPI_PostgreSQL'
+    image: postgres
+    ports:
+      - '5432:5432'
+    environment:
+      - POSTGRES_PASSWORD=
+      - POSTGRES_USER=
+      - POSTGRES_DB=
